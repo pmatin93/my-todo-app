@@ -12,7 +12,7 @@ def add_todo():
 todos = functions.get_user_input()
 
 ##### Dodaj naslov
-st.title("My Todo App")
+st.title("Monthly Rollercoaster")
 
 ##### Dodaj podnaslov
 st.subheader("This is subheader")
