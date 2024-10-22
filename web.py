@@ -15,7 +15,11 @@ todos = functions.get_user_input()
 st.title("Monthly Rollercoaster")
 
 ##### Dodaj podnaslov
-st.subheader("This is subheader")
+st.subheader("Add items that should be executed this month.")
+
+##### Dodaj polje za unos, sa place holderom
+st.text_input(label="", placeholder="Add new todo...",
+              on_change=add_todo, key="new_todo")
 
 ##### Za svaki item u fajlu, napravi checkbox na webapp
 for index, todo in enumerate(todos):
@@ -25,8 +29,4 @@ for index, todo in enumerate(todos):
         functions.update_list(todos)
         del st.session_state[todo]
         st.rerun()
-
-##### Dodaj polje za unos, sa place holderom
-st.text_input(label="", placeholder="Add new todo...",
-              on_change=add_todo, key="new_todo")
 
